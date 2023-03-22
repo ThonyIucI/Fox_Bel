@@ -1,20 +1,24 @@
+import { FC } from 'react';
 import '../styles/card.css'
+import { Song } from '../vite-env';
+interface prop{
+    song:Song
+}
 
-const Card = ({song}) => {
+const Card: FC<prop> = ({song}) => {
     const playSong=()=>{
-        console.log(song.id);
-        DZ.init({
-            appId: '590384',
-            channelUrl: 'http://http://localhost:5173//channel.html',
-            player: {
-                container: 'player',
-                width: 300,
-                height: 300,
-                format: 'square',
-                onload: function () { }
-            }
-        });
-        DZ.player.playTracks([song.id]);
+        // DZ.init({
+        //     appId: '590384',
+        //     channelUrl: 'http://http://localhost:5173//channel.html',
+        //     player: {
+        //         container: 'player',
+        //         width: 300,
+        //         height: 300,
+        //         format: 'square',
+        //         onload: function () { }
+        //     }
+        // });
+        // DZ.player.playTracks([song.id]);
     }
     return (
         <div className="fox-card">

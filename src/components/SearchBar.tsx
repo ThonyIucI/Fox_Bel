@@ -1,13 +1,13 @@
-import { FC, useState } from "react";
+import { FC, ReactSVGElement, useEffect, useState } from "react";
 import { alertError } from "../assets/alerts";
 import { useDataContext } from "../context/dataContext";
 import '../styles/searchbar.css'
+import { getInformation } from "./actions";
 
 const SearchBar: FC = () => {
     const [stringToSearch, SetString] = useState(),
    {saveResults}=useDataContext(),
-        handleChange = (e) => {
-            console.log(e.target.value);
+        handleChange = (e:any) => {
             SetString(e.target.value)
 
         },
@@ -30,6 +30,10 @@ const SearchBar: FC = () => {
          
            
         }
+        
+        useEffect(()=>{
+            getInformation()
+        },[])
     return <>
         <div
             id="main-navbar"

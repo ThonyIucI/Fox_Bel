@@ -3,13 +3,17 @@ import {
     createContext, useCallback,
     useContext, useMemo, useState
 } from 'react'
+import { Song } from '../vite-env'
 
+interface values{
+    results:Song[]
+    saveResults: (data: Song[]) => void
+}
 
-
-export const DataContext = createContext(
+export const DataContext = createContext <values>(
     {
        results:[],
-        saveResults:()=>{}
+        saveResults:(data:Song[])=>{}
     }
 )
 interface props {
@@ -17,10 +21,12 @@ interface props {
 }
 export default function DataContextProvider({ children }: props) {
 
-    const [results, setResults] = useState([])
+    const [results, setResults] = useState<Song[]>([])
 
 
-    const saveResults=(data)=>setResults(data)
+    const saveResults=(data:Song[])=>{
+        setResults(data)
+    }
 
     const value =  {
             results,
