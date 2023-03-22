@@ -1,0 +1,28 @@
+.sidebar-title{
+ 
+        /* 22-bold-white */
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        /* identical to box height */
+        color: #FFFFFF;
+}
+.sidebar-item li{
+    
+        /* 16-regular-white */
+    
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+}
+.sidebar-active{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+    
+    
+        /* Red Principal */
+        color: #E86060;
+}

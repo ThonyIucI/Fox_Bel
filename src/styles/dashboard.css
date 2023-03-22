@@ -1,0 +1,12 @@
+.image-container{
+    padding:50px 40px 0;
+    margin: 0;
+}
+.image-container img{
+    width: 100%;
+    max-width: 250px;
+}
+.sidebar{
+    background-color: #662323;
+    height: 100vh;
+}
