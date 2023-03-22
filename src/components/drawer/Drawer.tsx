@@ -13,7 +13,7 @@ import {
 
 // import MenuIcon from '@mui/icons-material/Menu'
 
-import ListItems from './ListItems'
+import ListItems from './Sidebar'
 import { FC, useState } from 'react'
 import '../../styles/dashboard.css'
 
@@ -26,23 +26,23 @@ interface Props {
 
 }
 
-const ResponsiveDrawer: FC<Props> = ({ window, children })=> {
+const ResponsiveDrawer: FC<Props> = ({ window, children }) => {
     const [mobileOpen, setMobileOpen] = useState<boolean>(false),
         handleDrawerToggle = () => {
             setMobileOpen(!mobileOpen)
         }
 
     const drawer = (
-         <div className="sidebar">
+        <div className="sidebar">
 
-        
+
             <div className="image-container">
-              
+
                 <img src="/images/foxbel-music.png" alt="Logo FoxBel" />
-                
+
             </div>
             <ListItems />
-            </div>
+        </div>
     )
 
     const container =
@@ -59,28 +59,24 @@ const ResponsiveDrawer: FC<Props> = ({ window, children })=> {
                         ml: { lg: `${drawerWidth}px` },
                         width: { lg: `calc(100% - ${drawerWidth}px)` }
                     }}>
-                    <Toolbar>
-                        <IconButton
-                            aria-label='open drawer'
-                            color='inherit'
-                            edge='start'
+                    <Toolbar sx={{background:'white'}}>
+                        {/* sx={{ display: { lg: 'none' }, mr: 2 }}> */}
+                        <button
+                        type="button" className="btn btn-outline-primary" data-mdb-ripple-color="dark"
                             onClick={handleDrawerToggle}
-                            sx={{ display: { lg: 'none' }, mr: 2 }}>
-                            {/* <MenuIcon /> */}
-                        </IconButton>
-                        <Stack
-                            direction='row' sx={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                width: '100%'
-                            }}>
-
-                            <Typography component='div' noWrap variant='h6'>
-                                SearchBar
-                            </Typography>
-                            {/* <UserMenu /> */}
-                        </Stack>
+                            style=''
+                            >
+                            <i className="fas fa-bars"></i>
+                        </button>
+                        <div className="row">
+                            <div className="col-md-10 col-lg-6 col-xl-6 mx-auto">
+                                <div className="input-group input-group-lg">
+                                    <input type="text" className="form-control form-control-lg rounded" placeholder="Buscar"
+                                        aria-label="Type Keywords" aria-describedby="basic-addon2" />
+                                    <span className="input-group-text border-0" id="basic-addon2"><i className="fas fa-search"></i></span>
+                                </div>
+                            </div>
+                        </div>
                     </Toolbar>
                 </AppBar>
                 <Box
