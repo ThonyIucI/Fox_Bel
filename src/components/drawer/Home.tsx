@@ -15,8 +15,8 @@ const Home: FC<Props> = ({ children }) => {
             <Sidebar />
             {/* Main layout */}
             <main>
-                    <SearchBar />
-                <div className="container pt-4">
+                <SearchBar />
+                <div className="container pt-4 results">
                     {/*  Navbar */}
 
                     {children}

@@ -10,10 +10,20 @@ const Sidebar
                     id="sidebarMenu"
                     className="collapse d-lg-block collapse bg-white sidebar"
                 >
-
+                    
                     <div className="sidebar_color">
                     <div className="image-container">
-
+                            <button
+                                className="navbar-toggler button-close"
+                                type="button"
+                                data-mdb-toggle="collapse"
+                                data-mdb-target="#sidebarMenu"
+                                aria-controls="sidebarMenu"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <i className="fas fa-bars"></i>
+                            </button>
                         <img src="/images/foxbel-music.png" alt="Logo FoxBel" />
 
                     </div>
@@ -44,9 +54,6 @@ const Sidebar
                     </div>
 
                 </nav>
-
-
-
                 {/*  Navbar */}
             </header >
 

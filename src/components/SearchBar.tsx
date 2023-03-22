@@ -2,7 +2,6 @@ import { FC, useState } from "react";
 import { alertError } from "../assets/alerts";
 import { useDataContext } from "../context/dataContext";
 import '../styles/searchbar.css'
-import { searchByString } from "./actions";
 
 const SearchBar: FC = () => {
     const [stringToSearch, SetString] = useState(),
@@ -12,8 +11,7 @@ const SearchBar: FC = () => {
             SetString(e.target.value)
 
         },
-        handleSubmit=async ()=>{
-            console.log(stringToSearch);
+        handleSubmit= ()=>{
             try {
                 if (stringToSearch) {
                 DZ.api(`/search?q=track:"${stringToSearch}"`, function (response: any) {
@@ -28,7 +26,6 @@ const SearchBar: FC = () => {
               }  
             } catch (error) {
                 console.log(error);
-                
             }
          
            

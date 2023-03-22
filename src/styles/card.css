@@ -1,0 +1,40 @@
+.fox-card{
+    width: 160px;
+    
+}
+.card-image{
+
+    display: flex;
+        height: 160px;
+        justify-content: center;
+        align-items: center;
+}
+
+.card-image .fa-ellipsis-v {
+  color: white;
+    align-self: self-start;
+    margin: 5px;
+}
+.card-image .fa-play{
+color: white;
+}
+.album{
+    /* 14-bold-qs */
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height */
+    
+    
+        color: #555555;
+}
+.title{
+    /* 12-regular-qs */
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        /* identical to box height */
+    
+        /* Gray */
+        color: #828282;
+}

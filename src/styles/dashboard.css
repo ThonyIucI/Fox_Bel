@@ -53,3 +53,47 @@ border: 1px solid #828282;
 .btn-link.active:focus {
     background-color: rgba(255, 255, 255, .35);
 }
+.results{
+    overflow: auto;
+    height: calc(100vh - 96px);
+}
+/* .contenedor {
+    margin: 2rem auto;
+    border: 1px solid #aaa;
+    height: 300px;
+    width: 90%;
+    max-width: 400px;
+    background: #f1f2f3;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0 1rem;
+} */
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.results::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.results::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.results::-webkit-scrollbar-button:increment,
+.results::-webkit-scrollbar-button {
+    display: none;
+}
+
+.results::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.results::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.results::-webkit-scrollbar-track {
+    border-radius: 10px;
+}

@@ -56,3 +56,10 @@
         /* Red Principal */
         color: #E86060 !important;
 }
+.button-close{
+        position: fixed;
+                color: white;
+                top: 15px;
+                left: 15px;
+                font-size: 20px;
+}
