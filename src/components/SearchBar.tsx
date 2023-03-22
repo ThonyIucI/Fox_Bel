@@ -1,8 +1,7 @@
-import { FC, ReactSVGElement, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { alertError } from "../assets/alerts";
 import { useDataContext } from "../context/dataContext";
 import '../styles/searchbar.css'
-import { getInformation } from "./actions";
 
 const SearchBar: FC = () => {
     const [stringToSearch, SetString] = useState(),
@@ -14,26 +13,21 @@ const SearchBar: FC = () => {
         handleSubmit= ()=>{
             try {
                 if (stringToSearch) {
-                // DZ.api(`/search?q=track:"${stringToSearch}"`, function (response: any) {
-                //     console.log(response);
+                DZ.api(`/search?q=track:"${stringToSearch}"`, function (response: any) {
+                    console.log(response);
                     
-                //     if (!response.data.length) {
-                //       return  alertError('Ups, No existen coincidencias, pruebe con otra canción o álbum')
-                //     }
-                //     saveResults(response.data)
-                //     return response
-                // });
+                    if (!response.data.length) {
+                      return  alertError('Ups, No existen coincidencias, pruebe con otra canción o álbum')
+                    }
+                    saveResults(response.data)
+                    return response
+                });
               }  
             } catch (error) {
                 console.log(error);
-            }
-         
-           
+            }         
         }
         
-        useEffect(()=>{
-            getInformation()
-        },[])
     return <>
         <div
             id="main-navbar"
@@ -55,17 +49,17 @@ const SearchBar: FC = () => {
                 </button>
 
 
-                <a className="navbar-brand" href="#">
+                {/* <a className="navbar-brand" href="#">
                     <img
                         src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
                         height="25"
                         alt=""
                         loading="lazy"
                     />
-                </a>
+                </a> */}
 
                 <div className="col-md-10 col-lg-6 col-xl-6 mx-auto">
-                    <div className="input-group input-group-lg">
+                    <div className="input-group input-group-lg search-box">
                         <input type="text" className="form-control form-control-lg rounded" placeholder="Buscar"
                             aria-label="Type Keywords" aria-describedby="basic-addon2" onChange={handleChange} />
                         <span className="input-group-text border-0" id="basic-addon2"

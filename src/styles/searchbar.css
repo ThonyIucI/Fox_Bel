@@ -5,3 +5,9 @@
 i{
     cursor: pointer;
 }
+.search-box{
+    padding-left: 20px;
+}
+.search-box input {
+    padding-left: 0px;
+}
