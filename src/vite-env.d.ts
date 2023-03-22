@@ -9,3 +9,8 @@ export interface Album{
     title:string
     cover:string
 }
+declare global {
+    interface Window {
+        DZ: any;
+    }
+}

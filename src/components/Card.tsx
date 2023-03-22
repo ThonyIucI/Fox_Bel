@@ -7,18 +7,20 @@ interface prop{
 
 const Card: FC<prop> = ({song}) => {
     const playSong=()=>{
-        // DZ.init({
-        //     appId: '590384',
-        //     channelUrl: 'http://http://localhost:5173//channel.html',
-        //     player: {
-        //         container: 'player',
-        //         width: 300,
-        //         height: 300,
-        //         format: 'square',
-        //         onload: function () { }
-        //     }
-        // });
-        // DZ.player.playTracks([song.id]);
+        window.DZ.init({
+            appId: '590384',
+            channelUrl: 'http://fox-bel.vercel.app/channel.html',
+            player: {
+                container: 'player',
+                width: 300,
+                height: 300,
+                format: 'square',
+                onload: function () {
+                    window.DZ.player.playTracks([song.id]);
+                 }
+            }
+        });
+       
     }
     return (
         <div className="fox-card">

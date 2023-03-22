@@ -3,6 +3,7 @@ import { alertError } from "../assets/alerts";
 import { useDataContext } from "../context/dataContext";
 import '../styles/searchbar.css'
 
+
 const SearchBar: FC = () => {
     const [stringToSearch, SetString] = useState(),
    {saveResults}=useDataContext(),
@@ -13,7 +14,7 @@ const SearchBar: FC = () => {
         handleSubmit= ()=>{
             try {
                 if (stringToSearch) {
-                DZ.api(`/search?q=track:"${stringToSearch}"`, function (response: any) {
+                window.DZ.api(`/search?q=track:"${stringToSearch}"`, function (response: any) {
                     console.log(response);
                     
                     if (!response.data.length) {
