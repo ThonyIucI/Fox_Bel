@@ -64,7 +64,7 @@ const ResponsiveDrawer: FC<Props> = ({ window, children }) => {
                         <button
                         type="button" className="btn btn-outline-primary" data-mdb-ripple-color="dark"
                             onClick={handleDrawerToggle}
-                            style=''
+                           
                             >
                             <i className="fas fa-bars"></i>
                         </button>
