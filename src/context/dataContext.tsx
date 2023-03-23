@@ -4,16 +4,20 @@ import {
     useContext, useMemo, useState
 } from 'react'
 import { Song } from '../vite-env'
-
-interface values{
-    results:Song[]
+// ||
+interface values {
+    actualSong: Song | null
+    results: Song[]
     saveResults: (data: Song[]) => void
+    showSong: (data: Song) => void
 }
 
-export const DataContext = createContext <values>(
+export const DataContext = createContext<values>(
     {
-       results:[],
-        saveResults:(data:Song[])=>{}
+        actualSong: null,
+        results: [],
+        saveResults: (data: Song[]) => { },
+        showSong: (data: Song) => { }
     }
 )
 interface props {
@@ -22,16 +26,19 @@ interface props {
 export default function DataContextProvider({ children }: props) {
 
     const [results, setResults] = useState<Song[]>([])
+    const [actualSong, setActualSong] = useState<Song | null>(null)
 
 
-    const saveResults=(data:Song[])=>{
-        setResults(data)
+    const saveResults = (data: Song[]) => setResults(data)
+    const showSong = (data: Song) => setActualSong(data)
+
+
+    const value = {
+        actualSong,
+        showSong,
+        results,
+        saveResults
     }
-
-    const value =  {
-            results,
-            saveResults
-        }
 
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>
 }
