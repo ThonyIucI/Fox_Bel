@@ -30,13 +30,14 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
+    margin-top: 8px;
     /* identical to box height */
 
 
     color: #555555;
 }
 
-.title {
+.c-title {
     /* 12-regular-qs */
     font-weight: 400;
     font-size: 12px;

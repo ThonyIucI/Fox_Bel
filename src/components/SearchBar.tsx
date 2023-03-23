@@ -39,22 +39,22 @@ const SearchBar: FC = () => {
             className="navbar navbar-expand-lg navbar-light bg-white"
         >
 
-           
-
-                <button
-                    className="navbar-toggler nav-button"
-                    type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#sidebarMenu"
-                    aria-controls="sidebarMenu"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <i className="fas fa-bars"></i>
-                </button>
 
 
-                {/* <a className="navbar-brand" href="#">
+            <button
+                className="navbar-toggler nav-button"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#sidebarMenu"
+                aria-controls="sidebarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <i className="fas fa-bars"></i>
+            </button>
+
+
+            {/* <a className="navbar-brand" href="#">
                     <img
                         src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
                         height="25"
@@ -62,52 +62,52 @@ const SearchBar: FC = () => {
                         loading="lazy"
                     />
                 </a> */}
-                
-                    <div className="searcbar mx-auto">
-                        <div className="input-group input-group-lg search-box">
-                            <input type="text" className="form-control form-control-lg rounded" placeholder="Buscar"
-                                aria-label="Type Keywords" aria-describedby="basic-addon2" onChange={handleChange} />
-                            <span className="input-group-text border-0" id="basic-addon2"
-                                onClick={handleSubmit}
-                            ><i className="fas fa-search"></i></span>
-                        </div>
-                    </div>
 
-<div className="user">
+            <div className="searcbar mx-auto">
+                <div className="input-group input-group-lg search-box">
+                    <input type="text" className="form-control form-control-lg rounded" placeholder="Buscar"
+                        aria-label="Type Keywords" aria-describedby="basic-addon2" onChange={handleChange} />
+                    <span className="input-group-text border-0" id="basic-addon2"
+                        onClick={handleSubmit}
+                    ><i className="fas fa-search"></i></span>
+                </div>
+            </div>
+
+            <div className="user">
                 <div className="user-name"> Anthony Urbina</div>
-                    <ul className="navbar-nav ms-auto d-flex flex-row">
+                <ul className="navbar-nav ms-auto d-flex flex-row">
 
 
-                   
-                        <li className="nav-item dropdown">
-                            <a
-                                className="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
-                                href="#"
-                                id="navbarDropdownMenuLink"
-                                role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <img
-                                    src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
-                                    className="rounded-circle"
-                                    height="22"
-                                    alt=""
-                                    loading="lazy"
-                                />
-                            </a>
-                            <ul
-                                className="dropdown-menu dropdown-menu-end"
-                                aria-labelledby="navbarDropdownMenuLink"
-                            >
-                                <li><a className="dropdown-item" href="#">My profile</a></li>
-                                <li><a className="dropdown-item" href="#">Settings</a></li>
-                                <li><a className="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    </div>
-            
+
+                    <li className="nav-item dropdown">
+                        <a
+                            className="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <img
+                                src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
+                                className="rounded-circle"
+                                height="22"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </a>
+                        <ul
+                            className="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbarDropdownMenuLink"
+                        >
+                            <li><a className="dropdown-item" href="#">My profile</a></li>
+                            <li><a className="dropdown-item" href="#">Settings</a></li>
+                            <li><a className="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </>
 

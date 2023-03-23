@@ -32,7 +32,7 @@ const Card: FC<prop> = ({song}) => {
                 <i className="fa fa-play" aria-hidden="true" onClick={playSong}></i>
             </div>
                 <div className='album'>{song?.album?.title}</div>
-                <div className='title'>{song?.title}</div>
+            <div className='c-title'>{song?.title}</div>
         </div>
         
     );
