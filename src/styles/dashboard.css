@@ -55,6 +55,7 @@ border: 1px solid #828282;
 }
 .results{
     overflow: auto;
+    padding: 40px;
     height: calc(100vh - 96px);
 }
 /* .contenedor {

@@ -14,7 +14,7 @@ const Sidebar
                     <div className="sidebar_color">
                     <div className="image-container">
                             <button
-                                className="navbar-toggler button-close"
+                                className="navbar-toggler button-close d-block d-lg-none"
                                 type="button"
                                 data-mdb-toggle="collapse"
                                 data-mdb-target="#sidebarMenu"
