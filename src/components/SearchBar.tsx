@@ -53,16 +53,6 @@ const SearchBar: FC = () => {
                 <i className="fas fa-bars"></i>
             </button>
 
-
-            {/* <a className="navbar-brand" href="#">
-                    <img
-                        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-                        height="25"
-                        alt=""
-                        loading="lazy"
-                    />
-                </a> */}
-
             <div className="searcbar mx-auto">
                 <div className="input-group input-group-lg search-box">
                     <input type="text" className="form-control form-control-lg rounded" placeholder="Buscar"
@@ -74,7 +64,7 @@ const SearchBar: FC = () => {
             </div>
 
             <div className="user">
-                <div className="user-name"> Anthony Urbina</div>
+                <div className="user-name d-none d-sm-block">Anthony Urbina</div>
                 <ul className="navbar-nav ms-auto d-flex flex-row">
 
 
@@ -100,6 +90,8 @@ const SearchBar: FC = () => {
                             className="dropdown-menu dropdown-menu-end"
                             aria-labelledby="navbarDropdownMenuLink"
                         >
+                           
+                            <li><a className="dropdown-item" href="#">Anthony Urbina</a></li>
                             <li><a className="dropdown-item" href="#">My profile</a></li>
                             <li><a className="dropdown-item" href="#">Settings</a></li>
                             <li><a className="dropdown-item" href="#">Logout</a></li>
