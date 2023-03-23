@@ -33,9 +33,11 @@ const ActualCard: FC = () => {
                 </div>
             </div>
             <div className="wrapper back-image" style={{ backgroundImage: `url("${actualSong?.artist?.picture_big}")` }} >
-                <div className="title">{`${actualSong?.artist.name} ${actualSong?.album.title}`}  </div>
-                <div className="sub-title">Lo mejor de {actualSong?.artist.name} <b> 321, 123 seguidores</b></div>
-                <div className="description"></div>
+                <div className="text">
+                    <div className="title">{`${actualSong?.artist.name} ${actualSong?.album.title}`}  </div>
+                    <div className="sub-title">Lo mejor de {actualSong?.artist.name} <b> 321, 123 seguidores</b></div>
+                    <div className="description"></div>
+                </div>
             </div>
         </div>
     );
