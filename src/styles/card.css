@@ -1,40 +1,48 @@
-.fox-card{
+.fox-card {
     width: 160px;
-    
+
 }
-.card-image{
+
+.card-image {
 
     display: flex;
-        height: 160px;
-        justify-content: center;
-        align-items: center;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-image .fa-ellipsis-v {
-  color: white;
+    color: white;
     align-self: self-start;
     margin: 5px;
 }
-.card-image .fa-play{
-color: white;
+
+.card-image .fa-play {
+    color: white;
+    font-size: 36px;
 }
-.album{
+
+.album {
     /* 14-bold-qs */
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        /* identical to box height */
-    
-    
-        color: #555555;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #555555;
 }
-.title{
+
+.title {
     /* 12-regular-qs */
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        /* identical to box height */
-    
-        /* Gray */
-        color: #828282;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    /* Gray */
+    color: #828282;
 }
