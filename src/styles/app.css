@@ -2,4 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 22px;
+    justify-content: space-between;
+}
+.results-title{
+    /* 22-bold-white */
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        margin: 0;
+        /* identical to box height */
+    
+    
+        /* Red Principal */
+    
+        color: #E86060;
 }
