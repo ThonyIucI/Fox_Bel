@@ -17,3 +17,9 @@
     
         color: #E86060;
 }
+@media (max-width: 430px) {
+    .cards {
+        
+       justify-content: center;
+    }
+}
