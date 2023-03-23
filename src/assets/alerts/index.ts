@@ -49,7 +49,7 @@ import Swal from 'sweetalert2'
         quoteTosale()
     })
   }
-  export const authAlert = (type: 'success'|'error', message: string) => {
+  export const shortAlert = (type: 'success'|'error', message: string) => {
     const Toast = Swal.mixin({
       didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
