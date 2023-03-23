@@ -5,7 +5,7 @@ import '../styles/actualCard.css'
 
 const ActualCard: FC = () => {
     const { actualSong } = useDataContext()
-    console.log(actualSong);
+    // console.log(actualSong);
 
     const playSong = () => {
         window.DZ.init({
